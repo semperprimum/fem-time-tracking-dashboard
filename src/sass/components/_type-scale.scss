@@ -1,0 +1,20 @@
+$type-scale: (
+  mobile: (
+    300: 0.9375rem /* Information */,
+    400: 1.125rem /* Body */,
+    500: 1.5rem /* Name */,
+    600: 2rem /* Time */,
+  ),
+  desktop: (
+    300: 0.9375rem,
+    400: 1.125rem,
+    500: 2.5rem,
+    600: 3.5rem,
+  ),
+);
+
+$font-weights: (
+  regular: 300,
+  semi-bold: 400,
+  bold: 500,
+);

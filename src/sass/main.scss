@@ -1,0 +1,36 @@
+@use "./components/reset";
+@use "./components/root";
+@use "./components/media-query" as *;
+@use "./components/type-scale" as *;
+@use "./components/colors" as *;
+
+body {
+  font-family: "Rubik Variable", sans-serif;
+  background-color: var(--clr-primary-600);
+  color: var(--clr-primary-100);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-300);
+  @include mq(desktop) {
+    display: grid;
+    align-items: center;
+    padding-inline: 1rem;
+  }
+}
+//   Font weight utility classes
+@each $font-weight, $value in $font-weights {
+  .fw-#{$font-weight} {
+    font-weight: $value;
+  }
+}
+
+// Color utility classes
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: $value;
+    }
+    .bg-#{$color}-#{$shade} {
+      background-color: $value;
+    }
+  }
+}

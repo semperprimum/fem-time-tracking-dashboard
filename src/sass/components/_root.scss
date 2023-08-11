@@ -1,0 +1,26 @@
+@use "./colors" as *;
+@use "./type-scale" as *;
+@use "./media-query" as *;
+
+:root {
+  // Color variables
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+  // Font size variables
+  @each $screen-size, $font-size in $type-scale {
+    @if $screen-size == mobile {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include mq($screen-size) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}
