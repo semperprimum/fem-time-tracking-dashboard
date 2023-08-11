@@ -19,7 +19,7 @@ export default function CardsList({ data }) {
   return (
     <CardsListWrapper role="list" aria-label="Stats">
       {data.map((item) => (
-        <Card key={item.title} item={item} />
+        <Card role="listitem" key={item.title} item={item} />
       ))}
     </CardsListWrapper>
   );

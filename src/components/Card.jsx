@@ -8,7 +8,7 @@ import { ReactComponent as IconSocial } from "../assets/images/icon-social.svg";
 import { ReactComponent as IconSelfCare } from "../assets/images/icon-self-care.svg";
 import { useType } from "../context/TypeContext";
 
-const CardWrapper = styled.article`
+const CardWrapper = styled.div`
   margin-top: 1.5rem;
 
   @media only screen and (min-width: 60em) {
