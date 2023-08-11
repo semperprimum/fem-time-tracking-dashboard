@@ -107,6 +107,7 @@ export function Card({ item }) {
         <FlexBetween>
           <Title className="fw-bold">{item.title}</Title>
           <ElipsesButton>
+            <span className="visually-hidden">More</span>
             <IconElipses />
           </ElipsesButton>
         </FlexBetween>

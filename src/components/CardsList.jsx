@@ -17,7 +17,7 @@ const CardsListWrapper = styled.ul`
 
 export default function CardsList({ data }) {
   return (
-    <CardsListWrapper role="list">
+    <CardsListWrapper role="list" aria-label="Stats">
       {data.map((item) => (
         <Card key={item.title} item={item} />
       ))}
